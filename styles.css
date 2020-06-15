@@ -54,6 +54,21 @@ a:hover {
 .nav a:hover {
   color: white
 }
+.prof-nav{
+  margin-top: 25px;
+}
+div .profile-image {
+  display: block;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 3px solid white;
+  transition: all .5s;
+  padding: 0;
+}
+div .profile-image:hover {
+  transform: scale(1.2) rotate(5deg);
+}
 
 header {
   text-align: center;
@@ -75,6 +90,11 @@ header .profile-image {
 }
 header .profile-image:hover {
   transform: scale(1.2) rotate(5deg);
+}
+.arrow{
+  display: block;
+  width: 50px;
+  margin: auto;
 }
 .exp-head {
   text-align: center;
@@ -101,8 +121,9 @@ header .profile-image:hover {
   color: white;
 }
 .card {
-  margin: 30px;
+  margin: 30px auto;
   padding: 20px 40px 40px;
+  width: 90%;
   max-width: 500px;
   text-align: center;
   background: #fff;
@@ -118,18 +139,29 @@ ul.skills {
   padding: 0;
   text-align: center;
 }
+.card-graphic{
+  display: inline-block;
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  margin: 5px auto;
+}
 .card h3{
   color: teal;
-  margin-top: 5px;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
-
+.card-intro{
+  margin: auto;
+  align-self: center;
+}
 .skills li {
   border-radius: 6px;
   display: inline-block;
   background: teal;
   color: white;
   padding: 5px 10px;
-  margin: 2px;
+  margin: 5px 0;
 }
 
 .skills li:nth-child(odd) {
@@ -144,6 +176,7 @@ ul.skills {
 }
 .exp-list li{
  padding: 2.5px 0;
+ margin: 5px;
 }
 
 footer {
@@ -214,7 +247,24 @@ a.social:hover {
     max-width: 1200px;
     padding: 0 30px;
   }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px;
+  }
 
+  .three-column{
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-around;
+  }  
+
+ .three-column .card{
+   flex: 1 33%;
+   max-width: 400px;
+}
 
   main {
     padding-top: 20px;
@@ -232,3 +282,8 @@ a.social:hover {
 
 }
 
+@media screen and (min-width: 1050px) {
+  .three-column .card {
+    flex-basis: 0;
+  }
+}
