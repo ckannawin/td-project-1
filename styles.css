@@ -41,8 +41,9 @@ a:hover {
 }
 
 .nav .name {
-    display: block;
+    display: inline-block;
     margin-right: auto;
+    margin-left: 0;
     color: white;
 }
 .nav li {
@@ -58,12 +59,15 @@ a:hover {
   margin-top: 25px;
 }
 div .profile-image {
-  display: block;
+  display: inline-block;
   width: 75px;
   height: 75px;
   border-radius: 50%;
   border: 3px solid white;
   transition: all .5s;
+  padding: 0;
+}
+#prof-li{
   padding: 0;
 }
 div .profile-image:hover {
@@ -75,7 +79,7 @@ header {
   background: linear-gradient(to bottom, transparent, rgba(42,52,57)), steelblue url(images/rsz_skyline.jpg) no-repeat center;
   background-size: cover;
   overflow: hidden;
-  padding-top: 60px;
+  padding-top: 150px;
 }
 header {
   line-height: 1.5;
@@ -98,6 +102,7 @@ header .profile-image:hover {
 }
 .exp-head {
   text-align: center;
+  align-content: center; 
   background: teal no-repeat center;
   background-size: cover;
   overflow: hidden;
