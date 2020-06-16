@@ -63,7 +63,7 @@ div .profile-image {
   width: 75px;
   height: 75px;
   border-radius: 50%;
-  border: 3px solid white;
+  border: 3px dashed teal;
   transition: all .5s;
   padding: 0;
 }
@@ -76,7 +76,7 @@ div .profile-image:hover {
 
 header {
   text-align: center;
-  background: linear-gradient(to bottom, transparent, rgba(42,52,57)), steelblue url(images/rsz_skyline.jpg) no-repeat center;
+  background: linear-gradient(to bottom, transparent, rgba(42,52,57)), teal url(images/rsz_skyline.jpg) no-repeat center;
   background-size: cover;
   overflow: hidden;
   padding-top: 150px;
@@ -89,7 +89,7 @@ header .profile-image {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid white;
+  border: 3px dashed teal;
   transition: all .5s;
 }
 header .profile-image:hover {
@@ -184,6 +184,52 @@ ul.skills {
  margin: 5px;
 }
 
+/* Resume CSS */
+.line-card {
+  margin: 30px auto;
+  padding: 20px 40px 40px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  background: #fff;
+  border-left: 4px solid #ccc;
+  border-radius: 6px;
+  transition: all .5s;
+}
+.line-card div {
+  flex-basis: 25%;
+  align-self: flex-start;
+}
+.line-card:hover {
+  border-color: teal;
+}
+.resume-container{
+  padding-top: 100px;
+  margin: 0 auto;
+}
+.resume-container .line-card {
+  margin-top: 30px;
+}
+.line-card h3{
+  font-size: 1em;
+  color: teal;
+  margin-top: 25%;
+}
+.line-title{
+  margin-top: 2%;
+}
+.line-card p,
+.line-card li{
+  font-size: .75em;
+  list-style-type: none;
+  line-height: 150%;
+}
+.line-card li{
+  margin: 3px 5px;
+}
+.line-card ul{
+  padding: 0;
+}
 footer {
   width: 100%;
   min-height: 30px;
@@ -291,4 +337,5 @@ a.social:hover {
   .three-column .card {
     flex-basis: 0;
   }
+
 }
