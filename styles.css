@@ -76,7 +76,10 @@ div .profile-image:hover {
 
 header {
   text-align: center;
-  background: linear-gradient(to bottom, transparent, rgba(42,52,57)), teal url(images/rsz_skyline.jpg) no-repeat center;
+  background-color:  teal; /* long-hand used for Safari 12.0.2 */
+  background-image: linear-gradient(to bottom, transparent, rgba(42,52,57)), url(images/rsz_skyline.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   overflow: hidden;
   padding-top: 150px;
@@ -100,7 +103,8 @@ header .profile-image:hover {
   width: 50px;
   margin: auto;
 }
-.exp-head {
+.exp-head,
+.contact-head {
   text-align: center;
   align-content: center; 
   background: teal no-repeat center;
@@ -109,7 +113,8 @@ header .profile-image:hover {
   padding-top: 60px;
   box-shadow:  0px 5px 5px rgba(0,0,0,.5);
 }
-.exp-head h1{
+.exp-head h1,
+.contact-head h1{
   margin-top: 50px;
 }
 .exp-head p{
@@ -184,7 +189,8 @@ ul.skills {
  margin: 5px;
 }
 
-/* Resume CSS */
+/* Resume Formatting */
+
 .line-card {
   margin: 30px auto;
   padding: 20px 40px 40px;
@@ -227,9 +233,93 @@ ul.skills {
 .line-card li{
   margin: 3px 5px;
 }
+.line-card li::before{
+  content="\200B"; /* Safari List Bug Fix */
+}
 .line-card ul{
   padding: 0;
 }
+
+/* Contact Formatting */
+
+form div {
+  margin: 10px auto;
+  width: 90%
+}
+
+.input-box{
+  height: 50px;
+  width: 200px;
+  margin: 10px 10px;
+  text-align: center;
+  font-size: 1em;
+  color: black;
+  border-radius: 10%;
+  background: #fff;
+  border: none;
+  border-bottom: 4px solid #ccc;
+  border-radius: 6px;
+  transition: all .5s;
+}
+.input-box:focus{
+  border-color: teal;
+}
+::placeholder{
+  color: teal;
+}
+form h2 {
+  color: teal;
+  margin-top: 30px;
+}
+label{
+  margin: 5px;
+  font-size: 1em;
+}
+ h2 input:hover,
+ label:hover {
+  color: teal;
+  border-color: teal;
+}
+textarea{
+  height: 250px;
+  width: 75%;
+  max-width: 420px;
+  border: none;
+  text-align: left;
+  font-size: 1.25em;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  border-radius: 10%;
+  border-bottom: 4px solid #ccc;
+  border-radius: 6px;
+  transition: all .5s;
+}
+textarea:hover{
+  border-color:teal;
+}
+.submit {
+  display: inline-block;
+  max-width: 250px;
+  text-decoration: none;
+  width: 45%;
+  margin: 30px;
+  padding: .2em .1em;
+  font-weight: bold;
+  font-size: 1.25em;
+  color: white;
+  border-radius: 5%;
+  border: none;
+  background: teal;
+}
+.submit:hover{
+  color: teal;
+  background: white;
+  border-bottom: 4px solid teal;
+  transition: all .5s;
+}
+
+/* Footer Formatting */
+
 footer {
   width: 100%;
   min-height: 30px;
@@ -293,7 +383,10 @@ a.social:hover {
   header {
     min-height: 470px;
   }
-
+ 
+  .contact-head{
+    min-height: auto;
+  }
   .nav {
     max-width: 1200px;
     padding: 0 30px;
@@ -332,6 +425,7 @@ a.social:hover {
   }
 
 }
+ /* Break for Three columns on About Me page */
 
 @media screen and (min-width: 1050px) {
   .three-column .card {
