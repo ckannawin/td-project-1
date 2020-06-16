@@ -1,3 +1,5 @@
+/*Tested on Chrome, FF, and Safari */
+
 /* Global Layout Set-up */
 * { 
   box-sizing: border-box;
@@ -76,13 +78,12 @@ div .profile-image:hover {
 
 header {
   text-align: center;
-  background-color:  teal; /* long-hand used for Safari 12.0.2 */
-  background-image: linear-gradient(to bottom, transparent, rgba(42,52,57)), url(images/rsz_skyline.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
+  background: linear-gradient(to bottom, transparent, rgb(42,52,57)), 
+                    teal url(images/rsz_skyline.jpg) no-repeat center;
   background-size: cover;
   overflow: hidden;
   padding-top: 150px;
+  margin: auto;
 }
 header {
   line-height: 1.5;
@@ -234,7 +235,7 @@ ul.skills {
   margin: 3px 5px;
 }
 .line-card li::before{
-  content="\200B"; /* Safari List Bug Fix */
+  content: "\200B"; /* Safari List Bug Fix */
 }
 .line-card ul{
   padding: 0;
