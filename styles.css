@@ -60,7 +60,7 @@ a:hover {
 .prof-nav{
   margin-top: 25px;
 }
-div .profile-image {
+nav .profile-image {
   display: inline-block;
   width: 75px;
   height: 75px;
@@ -72,7 +72,7 @@ div .profile-image {
 #prof-li{
   padding: 0;
 }
-div .profile-image:hover {
+nav .profile-image:hover {
   transform: scale(1.2) rotate(5deg);
 }
 
